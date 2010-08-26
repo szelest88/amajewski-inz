@@ -1,8 +1,0 @@
-C:\Documents and Settings\Bożenka\Moje dokumenty\Visual Studio 2008\Projects\test_billboardingu\test_billboardingu\bin\Release\test_billboardingu.exe
-C:\Documents and Settings\Bożenka\Moje dokumenty\Visual Studio 2008\Projects\test_billboardingu\test_billboardingu\bin\Release\test_billboardingu.pdb
-C:\Documents and Settings\Bożenka\Moje dokumenty\Visual Studio 2008\Projects\test_billboardingu\test_billboardingu\obj\Release\ResolveAssemblyReference.cache
-C:\Documents and Settings\Bożenka\Moje dokumenty\Visual Studio 2008\Projects\test_billboardingu\test_billboardingu\obj\Release\test_billboardingu.Form1.resources
-C:\Documents and Settings\Bożenka\Moje dokumenty\Visual Studio 2008\Projects\test_billboardingu\test_billboardingu\obj\Release\test_billboardingu.Properties.Resources.resources
-C:\Documents and Settings\Bożenka\Moje dokumenty\Visual Studio 2008\Projects\test_billboardingu\test_billboardingu\obj\Release\test_billboardingu.csproj.GenerateResource.Cache
-C:\Documents and Settings\Bożenka\Moje dokumenty\Visual Studio 2008\Projects\test_billboardingu\test_billboardingu\obj\Release\test_billboardingu.exe
-C:\Documents and Settings\Bożenka\Moje dokumenty\Visual Studio 2008\Projects\test_billboardingu\test_billboardingu\obj\Release\test_billboardingu.pdb
