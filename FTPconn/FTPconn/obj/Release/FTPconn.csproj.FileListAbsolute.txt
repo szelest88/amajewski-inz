@@ -1,0 +1,10 @@
+C:\Documents and Settings\Bożenka\Ustawienia lokalne\Dane aplikacji\Temporary Projects\FTPconn\bin\Release\FTPconn.exe
+C:\Documents and Settings\Bożenka\Ustawienia lokalne\Dane aplikacji\Temporary Projects\FTPconn\bin\Release\FTPconn.pdb
+C:\Documents and Settings\Bożenka\Ustawienia lokalne\Dane aplikacji\Temporary Projects\FTPconn\obj\Release\ResolveAssemblyReference.cache
+C:\Documents and Settings\Bożenka\Ustawienia lokalne\Dane aplikacji\Temporary Projects\FTPconn\obj\Release\FTPconn.Form1.resources
+C:\Documents and Settings\Bożenka\Ustawienia lokalne\Dane aplikacji\Temporary Projects\FTPconn\obj\Release\FTPconn.Properties.Resources.resources
+C:\Documents and Settings\Bożenka\Ustawienia lokalne\Dane aplikacji\Temporary Projects\FTPconn\obj\Release\FTPconn.csproj.GenerateResource.Cache
+C:\Documents and Settings\Bożenka\Ustawienia lokalne\Dane aplikacji\Temporary Projects\FTPconn\obj\Release\FTPconn.exe
+C:\Documents and Settings\Bożenka\Ustawienia lokalne\Dane aplikacji\Temporary Projects\FTPconn\obj\Release\FTPconn.pdb
+C:\Documents and Settings\Bożenka\Moje dokumenty\Visual Studio 2008\Projects\FTPconn\FTPconn\obj\Release\FTPconn.exe
+C:\Documents and Settings\Bożenka\Moje dokumenty\Visual Studio 2008\Projects\FTPconn\FTPconn\obj\Release\FTPconn.pdb
