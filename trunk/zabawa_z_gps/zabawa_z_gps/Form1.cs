@@ -9,6 +9,7 @@ using System.Windows.Forms;
 using System.IO;
 using System.Windows;
 using System.Resources;
+//popr
 
 
 namespace zabawa_z_gps
