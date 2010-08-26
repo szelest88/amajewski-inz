@@ -1,0 +1,8 @@
+C:\Documents and Settings\Bożenka\Ustawienia lokalne\Dane aplikacji\Temporary Projects\testObrotu\bin\Release\testObrotu.exe
+C:\Documents and Settings\Bożenka\Ustawienia lokalne\Dane aplikacji\Temporary Projects\testObrotu\bin\Release\testObrotu.pdb
+C:\Documents and Settings\Bożenka\Ustawienia lokalne\Dane aplikacji\Temporary Projects\testObrotu\obj\Release\ResolveAssemblyReference.cache
+C:\Documents and Settings\Bożenka\Ustawienia lokalne\Dane aplikacji\Temporary Projects\testObrotu\obj\Release\testObrotu.Form1.resources
+C:\Documents and Settings\Bożenka\Ustawienia lokalne\Dane aplikacji\Temporary Projects\testObrotu\obj\Release\testObrotu.Properties.Resources.resources
+C:\Documents and Settings\Bożenka\Ustawienia lokalne\Dane aplikacji\Temporary Projects\testObrotu\obj\Release\testObrotu.csproj.GenerateResource.Cache
+C:\Documents and Settings\Bożenka\Ustawienia lokalne\Dane aplikacji\Temporary Projects\testObrotu\obj\Release\testObrotu.exe
+C:\Documents and Settings\Bożenka\Ustawienia lokalne\Dane aplikacji\Temporary Projects\testObrotu\obj\Release\testObrotu.pdb
