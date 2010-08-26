@@ -1,8 +1,0 @@
-C:\Documents and Settings\Bożenka\Moje dokumenty\Visual Studio 2008\Projects\mapka\mapka\bin\Release\mapka.exe
-C:\Documents and Settings\Bożenka\Moje dokumenty\Visual Studio 2008\Projects\mapka\mapka\bin\Release\mapka.pdb
-C:\Documents and Settings\Bożenka\Moje dokumenty\Visual Studio 2008\Projects\mapka\mapka\obj\Release\ResolveAssemblyReference.cache
-C:\Documents and Settings\Bożenka\Moje dokumenty\Visual Studio 2008\Projects\mapka\mapka\obj\Release\mapka.Form1.resources
-C:\Documents and Settings\Bożenka\Moje dokumenty\Visual Studio 2008\Projects\mapka\mapka\obj\Release\mapka.Properties.Resources.resources
-C:\Documents and Settings\Bożenka\Moje dokumenty\Visual Studio 2008\Projects\mapka\mapka\obj\Release\mapka.csproj.GenerateResource.Cache
-C:\Documents and Settings\Bożenka\Moje dokumenty\Visual Studio 2008\Projects\mapka\mapka\obj\Release\mapka.exe
-C:\Documents and Settings\Bożenka\Moje dokumenty\Visual Studio 2008\Projects\mapka\mapka\obj\Release\mapka.pdb
