@@ -1,0 +1,16 @@
+C:\Documents and Settings\Bożenka\Ustawienia lokalne\Dane aplikacji\Temporary Projects\mapka\bin\Debug\mapka.exe
+C:\Documents and Settings\Bożenka\Ustawienia lokalne\Dane aplikacji\Temporary Projects\mapka\bin\Debug\mapka.pdb
+C:\Documents and Settings\Bożenka\Ustawienia lokalne\Dane aplikacji\Temporary Projects\mapka\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\Bożenka\Ustawienia lokalne\Dane aplikacji\Temporary Projects\mapka\obj\Debug\mapka.Form1.resources
+C:\Documents and Settings\Bożenka\Ustawienia lokalne\Dane aplikacji\Temporary Projects\mapka\obj\Debug\mapka.Properties.Resources.resources
+C:\Documents and Settings\Bożenka\Ustawienia lokalne\Dane aplikacji\Temporary Projects\mapka\obj\Debug\mapka.csproj.GenerateResource.Cache
+C:\Documents and Settings\Bożenka\Ustawienia lokalne\Dane aplikacji\Temporary Projects\mapka\obj\Debug\mapka.exe
+C:\Documents and Settings\Bożenka\Ustawienia lokalne\Dane aplikacji\Temporary Projects\mapka\obj\Debug\mapka.pdb
+C:\Documents and Settings\Bożenka\Moje dokumenty\Visual Studio 2008\Projects\mapka\mapka\obj\Debug\mapka.exe
+C:\Documents and Settings\Bożenka\Moje dokumenty\Visual Studio 2008\Projects\mapka\mapka\obj\Debug\mapka.pdb
+C:\Documents and Settings\Bożenka\Moje dokumenty\Visual Studio 2008\Projects\mapka\mapka\bin\Debug\mapka.exe
+C:\Documents and Settings\Bożenka\Moje dokumenty\Visual Studio 2008\Projects\mapka\mapka\bin\Debug\mapka.pdb
+C:\Documents and Settings\Bożenka\Moje dokumenty\Visual Studio 2008\Projects\mapka\mapka\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\Bożenka\Moje dokumenty\Visual Studio 2008\Projects\mapka\mapka\obj\Debug\mapka.Form1.resources
+C:\Documents and Settings\Bożenka\Moje dokumenty\Visual Studio 2008\Projects\mapka\mapka\obj\Debug\mapka.Properties.Resources.resources
+C:\Documents and Settings\Bożenka\Moje dokumenty\Visual Studio 2008\Projects\mapka\mapka\obj\Debug\mapka.csproj.GenerateResource.Cache
