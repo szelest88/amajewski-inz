@@ -1,8 +1,0 @@
-C:\Documents and Settings\Bożenka\Moje dokumenty\Visual Studio 2008\Projects\laczeniezportem\laczeniezportem\bin\Debug\laczeniezportem.exe
-C:\Documents and Settings\Bożenka\Moje dokumenty\Visual Studio 2008\Projects\laczeniezportem\laczeniezportem\bin\Debug\laczeniezportem.pdb
-C:\Documents and Settings\Bożenka\Moje dokumenty\Visual Studio 2008\Projects\laczeniezportem\laczeniezportem\obj\Debug\ResolveAssemblyReference.cache
-C:\Documents and Settings\Bożenka\Moje dokumenty\Visual Studio 2008\Projects\laczeniezportem\laczeniezportem\obj\Debug\WindowsFormsApplication1.Form1.resources
-C:\Documents and Settings\Bożenka\Moje dokumenty\Visual Studio 2008\Projects\laczeniezportem\laczeniezportem\obj\Debug\WindowsFormsApplication1.Properties.Resources.resources
-C:\Documents and Settings\Bożenka\Moje dokumenty\Visual Studio 2008\Projects\laczeniezportem\laczeniezportem\obj\Debug\laczeniezportem.csproj.GenerateResource.Cache
-C:\Documents and Settings\Bożenka\Moje dokumenty\Visual Studio 2008\Projects\laczeniezportem\laczeniezportem\obj\Debug\laczeniezportem.exe
-C:\Documents and Settings\Bożenka\Moje dokumenty\Visual Studio 2008\Projects\laczeniezportem\laczeniezportem\obj\Debug\laczeniezportem.pdb
