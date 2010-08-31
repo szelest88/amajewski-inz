@@ -42,7 +42,7 @@ namespace WindowsFormsApplication1
         {
             String exception = "";
             String to_append = "";
-            to_append = GPSConnector.GetData("COM11", exception);//12?
+            to_append = GPSConnector.GetData("COM12", exception);//12?
             to_append.Trim();
             if (to_append.Length>2)
             {
