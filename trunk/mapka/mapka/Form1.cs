@@ -60,7 +60,7 @@ namespace mapka
         private void mouseDown(object sender, MouseEventArgs e)
         {  
             pioro.Width = 4/skala;//?
-
+            if(checkBox1.Checked==false)
             moja_lista_punktow.Add(new Point((int)(e.Location.X/skala), (int)(e.Location.Y/skala)));
 
             
@@ -144,6 +144,11 @@ namespace mapka
         private void Form1_Activated(object sender, EventArgs e)
         {
             odswiez();
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
