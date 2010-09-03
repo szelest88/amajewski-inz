@@ -31,18 +31,20 @@ namespace WindowsFormsApplication1
         {
 
         }
-
+        string port = "COM12";
         private void click(object sender, EventArgs e)
         {
+            port = comboBox1.Text;
             if(!timer1.Enabled)
                 timer1.Enabled = true;
+
         }
 
         private void tick(object sender, EventArgs e)
         {
             String exception = "";
             String to_append = "";
-            to_append = GPSConnector.GetData("COM12", exception);//12?
+            to_append = GPSConnector.GetData(port, exception);//12?
             to_append.Trim();
             if (to_append.Length>2)
             {
