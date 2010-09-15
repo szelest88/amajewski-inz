@@ -20,11 +20,6 @@ namespace FTPconn
         private void button1_Click(object sender, EventArgs e)
         {
             backgroundWorker1.RunWorkerAsync();
-            
-
-
-
-
         }
 
         private void label1_Click(object sender, EventArgs e)
