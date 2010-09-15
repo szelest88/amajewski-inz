@@ -13,6 +13,7 @@ namespace mapka
 {
     public partial class Form1 : Form
     {
+        //test repo bo coś nawala
         List<Point> moja_lista_punktow;
      
         Graphics test;
