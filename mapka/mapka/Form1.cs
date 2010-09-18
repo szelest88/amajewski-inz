@@ -15,7 +15,7 @@ namespace mapka
     {
         //test repo bo coś nawala
         List<Point> moja_lista_punktow;
-     
+        List<Point> moja_lista_linii;
         Graphics test;
 
         Pen pioro;
@@ -24,10 +24,12 @@ namespace mapka
         {
             InitializeComponent();
             moja_lista_punktow = new List<Point>();
-           
+            moja_lista_linii = new List<Point>();
             test = pictureBox1.CreateGraphics();
             pioro = new Pen(Brushes.Red);
         }
+        bool poczatek = true;
+        
         private void odswiez()
         {
             
@@ -47,6 +49,13 @@ namespace mapka
                     );
                 
            }
+        //linie
+            for(int i=0;i<moja_lista_linii.Count;i++)
+            {
+                if (i % 2 == 1)
+                    test.DrawLine(pioro,moja_lista_linii[i], moja_lista_linii[i - 1]);
+
+            }
             pictureBox1.Update();
            
 
@@ -57,12 +66,20 @@ namespace mapka
             
           
         }
-         
+        bool parzyste = true;
         private void mouseDown(object sender, MouseEventArgs e)
         {  
             pioro.Width = 4/skala;//?
-            if(checkBox1.Checked==false)
-            moja_lista_punktow.Add(new Point((int)(e.Location.X/skala), (int)(e.Location.Y/skala)));
+            if (checkBox1.Checked == false)
+            {
+                
+                moja_lista_punktow.Add(new Point((int)(e.Location.X / skala), (int)(e.Location.Y / skala)));
+            }
+            else
+            {
+                parzyste = !parzyste;
+                moja_lista_linii.Add(new Point((int)(e.Location.X / skala), (int)(e.Location.Y / skala))); 
+            }
 
             
             odswiez();
@@ -150,6 +167,23 @@ namespace mapka
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
 
+        }
+        GraphicsState stan;
+        private void mm(object sender, MouseEventArgs e)
+        {
+            //tu jest prawie ok, ale coś miga
+            pictureBox1.Refresh();
+            odswiez();
+            if (!parzyste)
+            {
+                test.DrawLine(pioro,//trza poprawic skale
+                    moja_lista_linii[moja_lista_linii.Count-1],
+                    e.Location
+                );
+            }
+            
+            
+            
         }
     }
 }
