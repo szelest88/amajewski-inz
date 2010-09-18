@@ -30,6 +30,7 @@ namespace WindowsFormsApplication1
                 String datastr = ex.Message + ", " + ex.StackTrace;
                 exception = datastr;
                 port.Close();
+               // return datastr;
             }
             return temp;
         }

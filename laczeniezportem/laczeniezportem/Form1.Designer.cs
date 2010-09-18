@@ -34,6 +34,7 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.SuspendLayout();
             // 
             // label1
@@ -68,7 +69,7 @@
             // 
             // timer1
             // 
-            this.timer1.Interval = 5000;
+            this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.tick);
             // 
             // comboBox1
@@ -95,6 +96,11 @@
             this.comboBox1.TabIndex = 3;
             this.comboBox1.Text = "COM11";
             // 
+            // backgroundWorker1
+            // 
+            this.backgroundWorker1.WorkerSupportsCancellation = true;
+            this.backgroundWorker1.DoWork += new System.ComponentModel.DoWorkEventHandler(this.backgroundWorker1_DoWork);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -119,6 +125,7 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.ComboBox comboBox1;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
     }
 }
 
