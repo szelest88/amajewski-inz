@@ -31,29 +31,38 @@ namespace WindowsFormsApplication1
         {
 
         }
-        string port = "COM12";
+        string port;// = "COM12";
         private void click(object sender, EventArgs e)
         {
             port = comboBox1.Text;
-            if(!timer1.Enabled)
+            if (!timer1.Enabled)
                 timer1.Enabled = true;
-
+            timer1.Start();
         }
 
         private void tick(object sender, EventArgs e)
         {
-            String exception = "";
-            String to_append = "";
-            to_append = GPSConnector.GetData(port, exception);//12?
-            to_append.Trim();
-            if (to_append.Length>2)
-            {
-                textBox1.AppendText(to_append);
-            }
+            backgroundWorker1.CancelAsync();
+            if(!backgroundWorker1.IsBusy)
+            backgroundWorker1.RunWorkerAsync();
+        }
+
+        private void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
+        {
+
+             String exception = "";
+             String to_append = "";
+             to_append = GPSConnector.GetData(port, exception);//12?
+             to_append.Trim();
+             if (to_append.Length>2)
+             {
+                 textBox1.AppendText(to_append);
+             }
             
-                if(exception!="")
-            label1.Text = "Nastąpilł wyjątek: " + exception;
-     
+                 if(exception!="")
+             label1.Text = "Nastąpilł wyjątek: " + exception;
+      
+            
         }
     }
 }
