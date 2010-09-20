@@ -70,12 +70,12 @@ namespace mapka
         private void mouseDown(object sender, MouseEventArgs e)
         {  
             pioro.Width = 4/skala;//?
-            if (checkBox1.Checked == false)
+            if (radioButtonPunkty.Checked== true)
             {
                 
                 moja_lista_punktow.Add(new Point((int)(e.Location.X / skala), (int)(e.Location.Y / skala)));
             }
-            else
+            else if(radioButtonLinie.Checked ==true)
             {
                 parzyste = !parzyste;
                 moja_lista_linii.Add(new Point((int)(e.Location.X / skala), (int)(e.Location.Y / skala))); 
@@ -184,6 +184,16 @@ namespace mapka
             
             
             
+        }
+
+        private void radioButtonLinie_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void radioButtonPunkty_CheckedChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
