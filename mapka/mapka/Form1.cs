@@ -80,6 +80,22 @@ namespace mapka
                 parzyste = !parzyste;
                 moja_lista_linii.Add(new Point((int)(e.Location.X / skala), (int)(e.Location.Y / skala))); 
             }
+            //test
+            else if (radioButton3.Checked == true) //to, oczywiście, bardzo robocze
+            {
+                TextBox temp = new TextBox();
+
+
+                temp.BringToFront();
+                temp.Left = e.X;
+                temp.Top = e.Y;
+                temp.BringToFront();
+              //  pictureBox1.Visible = false;
+               
+                pictureBox1.Controls.Add(temp);
+                temp.Show();
+           
+            }
 
             
             odswiez();
