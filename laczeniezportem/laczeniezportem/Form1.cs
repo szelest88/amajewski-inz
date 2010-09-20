@@ -42,9 +42,10 @@ namespace WindowsFormsApplication1
 
         private void tick(object sender, EventArgs e)
         {
+            if (!backgroundWorker1.IsBusy)
+                backgroundWorker1.RunWorkerAsync();
+      
             backgroundWorker1.CancelAsync();
-            if(!backgroundWorker1.IsBusy)
-            backgroundWorker1.RunWorkerAsync();
         }
 
         private void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e)

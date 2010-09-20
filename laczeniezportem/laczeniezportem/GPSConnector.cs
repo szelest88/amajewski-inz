@@ -22,13 +22,14 @@ namespace WindowsFormsApplication1
             try
             {
                 port.Open();
-                temp = port.ReadLine();
+                temp = port.ReadExisting();
                 port.Close();
             }
             catch (Exception ex)
             {
                 String datastr = ex.Message + ", " + ex.StackTrace;
                 exception = datastr;
+                temp = datastr;
                 port.Close();
                // return datastr;
             }
