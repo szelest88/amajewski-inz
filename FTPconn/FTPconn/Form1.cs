@@ -33,7 +33,7 @@ namespace FTPconn
             FtpWebRequest myReq;
             String url = "ftp://strony.toya.net.pl/" + myInfo.Name;
             myReq = (FtpWebRequest)FtpWebRequest.Create(url);
-            myReq.Credentials = new NetworkCredential("szelest8", "lamborghini");
+            myReq.Credentials = new NetworkCredential("szelest8", textBox1.Text);
             myReq.KeepAlive = false;
             myReq.Method = WebRequestMethods.Ftp.UploadFile;
             myReq.UseBinary = true;
@@ -48,15 +48,17 @@ namespace FTPconn
             {
                 Stream strm = myReq.GetRequestStream();
                 contentLen = fs.Read(buff, 0, buffLength);
-                progressBar1.Maximum = (int)(fs.Length);
+                progressBar1.Maximum = (int)(fs.Length); //grafika
                 while (contentLen != 0)
                 {
-                    progressBar1.Increment(buffLength);
+                    progressBar1.Increment(buffLength); //grafika
                     strm.Write(buff, 0, contentLen);
                     contentLen = fs.Read(buff, 0, buffLength);
                 }
-                strm.Close();
+
+ strm.Close();
                 fs.Close();
+ 
             }
             catch (Exception ex)
             {
