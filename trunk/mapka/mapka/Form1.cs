@@ -67,12 +67,57 @@ namespace mapka
           
         }
         bool parzyste = true;
+        //do wstawiania tekstu
+        //kosmos, do zmiany rozmiaru czcionki
+        static public Font ChangeFontSize(Font font, float fontSize)
+        {
+            if (font != null)
+            {
+                float currentSize = font.Size;
+                if (currentSize != fontSize)
+                {
+                    font = new Font(font.Name, fontSize
+                        );
+                }
+            }
+            return font;
+        }
+        //...
+        TextBox textBox;
+        Label labelka;
+        int x, y;
+
+        
+        private void enterWText(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                ((TextBox)sender).Visible = false;
+                labelka = new Label();
+                labelka.ForeColor = Color.Red;
+                labelka.Font = ChangeFontSize(labelka.Font, 12.0F);
+                labelka.BackColor = Color.Transparent;
+                labelka.Text = ((TextBox)sender).Text;
+                labelka.Left = ((TextBox)sender).Location.X+5;
+                labelka.Top = ((TextBox)sender).Location.Y;
+                pictureBox1.Controls.Add(labelka);
+                //radioButton3.Text = ((TextBox)sender).Text;
+            }
+        }
         private void mouseDown(object sender, MouseEventArgs e)
         {  
             pioro.Width = 4/skala;//?
             if (radioButtonPunkty.Checked== true)
             {
-                
+                textBox = new TextBox();
+                textBox.Visible = true;
+                textBox.BringToFront();
+                textBox.Left = e.Location.X;
+                textBox.Top = e.Location.Y;
+                textBox.KeyDown += enterWText;
+                pictureBox1.Controls.Add(textBox);
+               // panel1.Controls.Add(textBox);
+
                 moja_lista_punktow.Add(new Point((int)(e.Location.X / skala), (int)(e.Location.Y / skala)));
             }
             else if(radioButtonLinie.Checked ==true)
@@ -194,7 +239,10 @@ namespace mapka
             {
                 test.DrawLine(pioro,//trza poprawic skale
                     moja_lista_linii[moja_lista_linii.Count-1],
-                    e.Location
+                    new Point(
+                        (int)(e.Location.X/skala),
+                    (int)(e.Location.Y/skala))
+                    
                 );
             }
             
