@@ -147,19 +147,41 @@ namespace testTao
         {
 
             Gl.glNewList(1, Gl.GL_COMPILE);
-          //  Gl.glBegin(GL.GL_TRIANGLE_STRIP);
-      //      for (int i = 0; i <= 360; i++)
-        //    {
+     
                 GL.Begin(BeginMode.Quads);
-                GL.Color3(Color.Red);
-                GL.Vertex3(1f, 4f, 0);
-                GL.Color3(Color.Yellow);
-                GL.Vertex3(-1f, 4f, 0);
-                GL.Vertex3(-1f, 0, 0);
-                GL.Vertex3(1f, 0, 0);
+                    GL.PushMatrix();
+                    GL.Color3(Color.Red);
+                    GL.Vertex3(1f, 4f, 0);
+                    GL.Color3(Color.Yellow);
+                    GL.Vertex3(-1f, 4f, 0);
+                    GL.Vertex3(-1f, 0, 0);
+                    GL.Vertex3(1f, 0, 0);
+                    
+                    GL.Color3(Color.Red);
+                    GL.Vertex3(1f, 4f, 1);
+                    GL.Color3(Color.Yellow);
+                    GL.Vertex3(-1f, 4f, 1);
+                    GL.Vertex3(-1f, 0, 1);
+                    GL.Vertex3(1f, 0, 1);
+
+                    GL.Color3(Color.Green);
+                    GL.Vertex3(1f, 4f, 1);//gora
+                    GL.Color3(Color.Red);
+                    GL.Vertex3(1f, 4f, 0);
+                    GL.Vertex3(1f, 0, 0);//dol
+                    GL.Vertex3(1f, 0, 1);
+
+                    GL.Color3(Color.Green);
+                    GL.Vertex3(-1f, 4f, 1);//gora
+                    GL.Color3(Color.Red);
+                    GL.Vertex3(-1f, 4f, 0);
+                    GL.Vertex3(-1f, 0, 0);//dol
+                    GL.Vertex3(-1f, 0, 1);
+
+                    GL.PopMatrix();
+                
+
                 GL.End();
-       //     };
-           // GL.End();
             Gl.glEndList();
 
 
@@ -239,30 +261,15 @@ namespace testTao
             GL.PushMatrix();//?
           
            
-            for (int x = -50; x <= 50; x++)
+            for (int x = -10; x <= 10; x++)
             {
-                for (int z = -50; z <= 50; z++)
+                for (int z = -10; z <= 10; z++)
                 {
 
 
 
                   GL.PushMatrix();//?
                     GL.Translate(x * 5f, -2f, z * 5f );
-
-                    
-                   // GL.PopMatrix();//?
-                   // GL.PushMatrix();
-                   /* dla listy 
-                    GL.Begin(BeginMode.Quads);
-                    GL.Color3(Color.Red);
-                    GL.Vertex3(1f, 4f, 0);
-                    GL.Color3(Color.Yellow);
-                    GL.Vertex3(-1f, 4f, 0);
-                    GL.Vertex3(-1f, 0, 0);
-                    GL.Vertex3(1f, 0, 0);
-                    GL.End();
-              *?
-                    */
                     Gl.glCallList(1);
                     GL.PopMatrix();
                     //nie tu
