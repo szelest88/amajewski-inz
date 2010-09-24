@@ -15,11 +15,12 @@ using OpenTK.Input;
 
 namespace testTao
 {
-    public partial class Form1 : Form
+    public partial class Form1: Form, IMessageFilter //drugi interfejs - keyup
     {
 
         public Form1()
         {
+            Application.AddMessageFilter(this);//keyup
             InitializeComponent();
             this.simpleOpenGlControl1.InitializeContexts();
             }
@@ -39,7 +40,28 @@ namespace testTao
         //do mojego
         float moj_ruch = 0.0f;
         float moj_obrot = 0.0f;
+ 
+        public bool PreFilterMessage(ref Message m) 
+{
+           //  const int WM_KEYDOWN = 0x100;
+            const int WM_KEYUP = 0x101;
+           // const int WM_SYSKEYDOWN = 0x104;
+          //  const int WM_SYSKEYUP = 0x105;
+            Keys keyCode = (Keys)(int)m.WParam & Keys.KeyCode;
+            if (m.Msg == WM_KEYUP && (keyCode == Keys.Left || keyCode == Keys.Right))
+            {
+               // moj_ruch = 0.0f;
+                 moj_obrot = 0.0f;
+            }
+         else if (m.Msg == WM_KEYUP && (keyCode ==Keys.Down || keyCode==Keys.Up))
+         {
+             moj_ruch = 0.0f;
+            // moj_obrot = 0.0f;
+         }
+         return false;
 
+}
+ 
         protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
         {
           
@@ -54,19 +76,19 @@ namespace testTao
                 //nowe, test
                 if (keyData == Keys.Up)
                 {
-                    moj_ruch += 0.3f;
+                    moj_ruch = 0.6f;
                 }
                 if (keyData == Keys.Down)
                 {
-                    moj_ruch -= 0.3f;
+                    moj_ruch = -0.6f;
                 }
                 if (keyData == Keys.Left)
                 {
-                    moj_obrot -= 0.1f;
+                    moj_obrot = -0.05f;
                 }
                 if (keyData == Keys.Right)
                 {
-                    moj_obrot += 0.1f;
+                    moj_obrot = 0.05f;
                 }
                 //do nowego zakomentowano:
                 /*
@@ -104,8 +126,8 @@ namespace testTao
             //podniesienie
                 else if (((msg.Msg == WM_KEYUP) || (msg.Msg == WM_SYSKEYUP)))
                 {
-                    moj_ruch = 0.0f;
-                    moj_obrot = 0.0f;
+                 //   moj_ruch = 0.0f;
+                //    moj_obrot = 0.0f;
                             simpleOpenGlControl1.Refresh();
                  
                      //eopodniesienie
@@ -123,6 +145,24 @@ namespace testTao
 
         private void simpleOpenGlControl1_Load(object sender, EventArgs e)
         {
+
+            Gl.glNewList(1, Gl.GL_COMPILE);
+          //  Gl.glBegin(GL.GL_TRIANGLE_STRIP);
+      //      for (int i = 0; i <= 360; i++)
+        //    {
+                GL.Begin(BeginMode.Quads);
+                GL.Color3(Color.Red);
+                GL.Vertex3(1f, 4f, 0);
+                GL.Color3(Color.Yellow);
+                GL.Vertex3(-1f, 4f, 0);
+                GL.Vertex3(-1f, 0, 0);
+                GL.Vertex3(1f, 0, 0);
+                GL.End();
+       //     };
+           // GL.End();
+            Gl.glEndList();
+
+
            // Glu.gluPerspective(45, 1, 0.01, 100);
            // Glu.gluLookAt(0, 0, 2, 0.001, 0, 0, 0, 1, 0);
             cameraMatrix = Matrix4.Identity;// z nowego
@@ -199,21 +239,20 @@ namespace testTao
             GL.PushMatrix();//?
           
            
-            for (int x = -10; x <= 10; x++)
+            for (int x = -50; x <= 50; x++)
             {
-                for (int z = -10; z <= 10; z++)
+                for (int z = -50; z <= 50; z++)
                 {
 
-                    
-                   
+
+
                   GL.PushMatrix();//?
-                    GL.Translate((float)x * 5f, -2f, (float)z * 5f );
-                    
-           
+                    GL.Translate(x * 5f, -2f, z * 5f );
+
                     
                    // GL.PopMatrix();//?
                    // GL.PushMatrix();
-                    
+                   /* dla listy 
                     GL.Begin(BeginMode.Quads);
                     GL.Color3(Color.Red);
                     GL.Vertex3(1f, 4f, 0);
@@ -222,7 +261,9 @@ namespace testTao
                     GL.Vertex3(-1f, 0, 0);
                     GL.Vertex3(1f, 0, 0);
                     GL.End();
-              
+              *?
+                    */
+                    Gl.glCallList(1);
                     GL.PopMatrix();
                     //nie tu
                 }
@@ -277,6 +318,11 @@ namespace testTao
             Matrix4 projection = Matrix4.CreatePerspectiveFieldOfView((float)Math.PI / 4, simpleOpenGlControl1.Width / (float)simpleOpenGlControl1.Height, 1.0f, 64.0f);
             GL.MatrixMode(MatrixMode.Projection);
             GL.LoadMatrix(ref projection);
+        }
+
+        private void fc(object sender, FormClosedEventArgs e)
+        {
+            Application.RemoveMessageFilter(this);
         }
     }
 }
