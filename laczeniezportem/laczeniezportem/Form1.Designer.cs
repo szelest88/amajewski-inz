@@ -89,7 +89,9 @@
             "COM11",
             "COM12",
             "COM13",
-            "COM14"});
+            "COM14",
+            "COM15",
+            "COM16"});
             this.comboBox1.Location = new System.Drawing.Point(23, 13);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(121, 21);
