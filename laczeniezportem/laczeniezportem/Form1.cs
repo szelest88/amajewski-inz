@@ -35,9 +35,7 @@ namespace WindowsFormsApplication1
         private void click(object sender, EventArgs e)
         {
             port = comboBox1.Text;
-            if (!timer1.Enabled)
-                timer1.Enabled = true;
-            timer1.Start();
+            backgroundWorker1.RunWorkerAsync();
         }
 
         private void tick(object sender, EventArgs e)
@@ -58,8 +56,9 @@ namespace WindowsFormsApplication1
 
         private void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
         {
-
+            timer1.Enabled = true;
             timer1.Start();
+            
             
         }
 

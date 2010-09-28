@@ -14,7 +14,7 @@ namespace WindowsFormsApplication1
                 
             String temp = "" ;
             SerialPort port = new SerialPort(port_name);
-            port.BaudRate = 9600;//9600
+            port.BaudRate = 19200;//9600
             port.DataBits = 8;
             port.Parity = Parity.None;
             port.StopBits = StopBits.One;
@@ -31,7 +31,7 @@ namespace WindowsFormsApplication1
                 String datastr = ex.Message + ", " + ex.StackTrace;
                 exception = datastr;
                 temp = datastr;
-                port.Close();
+                //port.Close();
                // return datastr;
             }
             port.Close();
