@@ -42,27 +42,24 @@ namespace WindowsFormsApplication1
 
         private void tick(object sender, EventArgs e)
         {
-            if (!backgroundWorker1.IsBusy)
-                backgroundWorker1.RunWorkerAsync();
-      
-            backgroundWorker1.CancelAsync();
+            String exception = "";
+            String to_append = "";
+            to_append = GPSConnector.GetData(port, exception);//12?
+            to_append.Trim();
+            //if (to_append.Length > 2)
+            // {
+            textBox1.AppendText(to_append + "f");
+            // }
+
+            if (exception != "")
+                label1.Text = "Nastąpilł wyjątek: " + exception;
+            
         }
 
         private void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
         {
 
-             String exception = "";
-             String to_append = "";
-             to_append = GPSConnector.GetData(port, exception);//12?
-             to_append.Trim();
-             if (to_append.Length>2)
-             {
-                 textBox1.AppendText(to_append);
-             }
-            
-                 if(exception!="")
-             label1.Text = "Nastąpilł wyjątek: " + exception;
-      
+            timer1.Start();
             
         }
 

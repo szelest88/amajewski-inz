@@ -11,19 +11,20 @@ namespace WindowsFormsApplication1
 
         public static String GetData(String port_name, String exception)
         {
+                
             String temp = "" ;
             SerialPort port = new SerialPort(port_name);
-            port.BaudRate = 38400;
+            port.BaudRate = 9600;//9600
             port.DataBits = 8;
             port.Parity = Parity.None;
             port.StopBits = StopBits.One;
+            port.Open();
+            
             exception = "";
             
             try
             {
-                port.Open();
-                temp = port.ReadExisting();
-                port.Close();
+                temp = port.ReadLine();
             }
             catch (Exception ex)
             {
@@ -33,6 +34,8 @@ namespace WindowsFormsApplication1
                 port.Close();
                // return datastr;
             }
+            port.Close();
+      
             return temp;
         }
 

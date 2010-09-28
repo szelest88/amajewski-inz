@@ -91,12 +91,13 @@
             "COM13",
             "COM14",
             "COM15",
-            "COM16"});
+            "COM16",
+            "COM17"});
             this.comboBox1.Location = new System.Drawing.Point(23, 13);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(121, 21);
             this.comboBox1.TabIndex = 3;
-            this.comboBox1.Text = "COM12";
+            this.comboBox1.Text = "COM17";
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // backgroundWorker1
