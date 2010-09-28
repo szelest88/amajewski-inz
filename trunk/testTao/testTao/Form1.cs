@@ -76,11 +76,11 @@ namespace testTao
                 //nowe, test
                 if (keyData == Keys.Up)
                 {
-                    moj_ruch = 0.6f;
+                    moj_ruch = 0.9f;
                 }
                 if (keyData == Keys.Down)
                 {
-                    moj_ruch = -0.6f;
+                    moj_ruch = -0.9f;
                 }
                 if (keyData == Keys.Left)
                 {
@@ -124,14 +124,14 @@ namespace testTao
                 //zakomentowano też:
                 
             //podniesienie
-                else if (((msg.Msg == WM_KEYUP) || (msg.Msg == WM_SYSKEYUP)))
-                {
+              //  else if (((msg.Msg == WM_KEYUP) || (msg.Msg == WM_SYSKEYUP)))
+              //  {
                  //   moj_ruch = 0.0f;
                 //    moj_obrot = 0.0f;
-                            simpleOpenGlControl1.Refresh();
+                 //           simpleOpenGlControl1.Refresh();
                  
                      //eopodniesienie
-                }
+             //   }
                  
             return base.ProcessCmdKey(ref msg, keyData);
              
@@ -248,36 +248,26 @@ namespace testTao
         public void timer1_Tick(object sender, EventArgs e)
         {
             //jak updateframe
-           
-           
-            GL.PushMatrix();
- cameraMatrix*=Matrix4.CreateTranslation(0, 0, moj_ruch);// z nowego
- GL.PushMatrix();
-             cameraMatrix*=Matrix4.CreateRotationY(moj_obrot);
+           // GL.PushMatrix();
+            cameraMatrix*=Matrix4.CreateTranslation(0, 0, moj_ruch);// z nowego
+            cameraMatrix *= Matrix4.CreateRotationY(moj_obrot);
+            //GL.PushMatrix();
             GL.MatrixMode(MatrixMode.Modelview);
-            
             GL.Clear(ClearBufferMask.ColorBufferBit | ClearBufferMask.DepthBufferBit);
             GL.LoadMatrix(ref cameraMatrix);
-            GL.PushMatrix();//?
-          
-           
-            for (int x = -10; x <= 10; x++)
+          for (int x = -30; x <= 30; x++)
             {
-                for (int z = -10; z <= 10; z++)
+                for (int z = -30; z <= 30; z++)
                 {
-
-
-
-                  GL.PushMatrix();//?
+                    GL.PushMatrix();//?
                     GL.Translate(x * 5f, -2f, z * 5f );
                     Gl.glCallList(1);
                     GL.PopMatrix();
-                    //nie tu
-                }
+                 }
             }
-            GL.PopMatrix();
-            GL.PopMatrix();//?
-            GL.PopMatrix();
+            //GL.PopMatrix();//?
+           // GL.PopMatrix();
+          GL.Flush();//?
             simpleOpenGlControl1.SwapBuffers();
            //do nowego zakomentowano:
             /*
