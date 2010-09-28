@@ -37,6 +37,7 @@ namespace mapka
             pioro.Width = szer;
             foreach (Point punkt in moja_lista_punktow)
             {
+                
                 test.DrawLine(
                 pioro,
                 new Point(punkt.X - (int)szer, punkt.Y - (int)szer),
@@ -57,6 +58,7 @@ namespace mapka
 
             }
             pictureBox1.Update();
+            
            
 
 
@@ -86,21 +88,26 @@ namespace mapka
         TextBox textBox;
         Label labelka;
         int x, y;
-
+        
         
         private void enterWText(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
             {
+                
                 ((TextBox)sender).Visible = false;
                 labelka = new Label();
                 labelka.ForeColor = Color.Red;
                 labelka.Font = ChangeFontSize(labelka.Font, 12.0F);
                 labelka.BackColor = Color.Transparent;
+                labelka.SendToBack();
+               
                 labelka.Text = ((TextBox)sender).Text;
                 labelka.Left = ((TextBox)sender).Location.X+5;
                 labelka.Top = ((TextBox)sender).Location.Y;
+                
                 pictureBox1.Controls.Add(labelka);
+                
                 //radioButton3.Text = ((TextBox)sender).Text;
             }
         }
@@ -245,6 +252,7 @@ namespace mapka
                     
                 );
             }
+           
             
             
             
