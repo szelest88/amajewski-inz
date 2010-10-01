@@ -30,7 +30,7 @@ namespace testTao
         public float obrot = 0.0f;
         //test: do FPP
         private Matrix4 cameraMatrix;
-        private Vector3 location;
+        //private Vector3 location;
         private Vector3 up = Vector3.UnitY;
         private float pitch = 0.0f;
         private float facing = 0.0f;
@@ -188,7 +188,7 @@ namespace testTao
            // Glu.gluPerspective(45, 1, 0.01, 100);
            // Glu.gluLookAt(0, 0, 2, 0.001, 0, 0, 0, 1, 0);
             cameraMatrix = Matrix4.Identity;// z nowego
-            location = new Vector3(0.0f, 10.0f, 0.0f); //z nowego
+            //location = new Vector3(0.0f, 10.0f, 0.0f); //z nowego
             mouseDelta = new Point(); //z nowego
             System.Windows.Forms.Cursor.Position = //nowe
                 new Point(Bounds.Left + Bounds.Width / 2,
@@ -251,13 +251,22 @@ namespace testTao
            // GL.PushMatrix();
             cameraMatrix*=Matrix4.CreateTranslation(0, 0, moj_ruch);// z nowego
             cameraMatrix *= Matrix4.CreateRotationY(moj_obrot);
-            //GL.PushMatrix();
             GL.MatrixMode(MatrixMode.Modelview);
             GL.Clear(ClearBufferMask.ColorBufferBit | ClearBufferMask.DepthBufferBit);
             GL.LoadMatrix(ref cameraMatrix);
-          for (int x = -30; x <= 30; x++)
+            //podłoga
+            GL.PushMatrix();
+            GL.Color3(Color.DarkRed);
+            GL.Begin(BeginMode.Quads);
+            GL.Vertex3(1000, -2, 1000);
+            GL.Vertex3(1000, -2, -1000);
+            GL.Vertex3(-1000, -2, -1000);
+            GL.Vertex3(-1000, -2, 1000);
+            
+            GL.End();
+            for (int x = -20; x <= 20; x++)
             {
-                for (int z = -30; z <= 30; z++)
+                for (int z = -20; z <= 20; z++)
                 {
                     GL.PushMatrix();//?
                     GL.Translate(x * 5f, -2f, z * 5f );
@@ -265,9 +274,8 @@ namespace testTao
                     GL.PopMatrix();
                  }
             }
-            //GL.PopMatrix();//?
-           // GL.PopMatrix();
-          GL.Flush();//?
+            GL.PopMatrix(); //podłoga
+           GL.Flush();//?
             simpleOpenGlControl1.SwapBuffers();
            //do nowego zakomentowano:
             /*
@@ -311,8 +319,14 @@ namespace testTao
         {
             screenCenter = new Point(Bounds.Left+(Bounds.Width/2),3);
             windowCenter = new Point(Width/2,Height/2);
-            GL.Viewport(simpleOpenGlControl1.Left, simpleOpenGlControl1.Top, simpleOpenGlControl1.Width, simpleOpenGlControl1.Height);
-            Matrix4 projection = Matrix4.CreatePerspectiveFieldOfView((float)Math.PI / 4, simpleOpenGlControl1.Width / (float)simpleOpenGlControl1.Height, 1.0f, 64.0f);
+            GL.Viewport(simpleOpenGlControl1.Left-59, simpleOpenGlControl1.Top-12, simpleOpenGlControl1.Width, simpleOpenGlControl1.Height);
+            Matrix4 projection = 
+                Matrix4.CreatePerspectiveFieldOfView
+                (
+                    (float)Math.PI / 4, 
+                    1.32f,
+                    1.32f, 164.0f
+                );
             GL.MatrixMode(MatrixMode.Projection);
             GL.LoadMatrix(ref projection);
         }
